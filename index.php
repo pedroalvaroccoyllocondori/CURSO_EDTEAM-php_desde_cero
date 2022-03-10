@@ -9,6 +9,14 @@
 <body>
     <h1>hola a todos mis</h1>
     
+    <?php
+    print "hola mundo";
+    for ($i=1; $i < 5; $i++) { 
+        echo "<h1 style='color:blue; background:yellow'>hola a todos</h1>\n";
+    }   
+    ?>
+    
+     
 </body>
 </html>
 
@@ -19,14 +27,3 @@
 
 
 
-<?php
-print "hola mundo";
-for ($i=1; $i < 5; $i++) { 
-    echo "<h1 style='color:blue; background:yellow'>hola a todos</h1>\n";
-}
-
-
-
-?>
-
- 
