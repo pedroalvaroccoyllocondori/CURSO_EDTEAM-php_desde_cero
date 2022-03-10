@@ -1,15 +1,36 @@
+
 <?php
+// operadores numericos
+// suma +,suma de a+b
+// resta -nresta de a-b
+// multipliacion *, producto de a*b
+// division /, cociente de a/ b 
+// modulo %, resto de division de a/ b
+// ================================================================
+// operadores de  asignacion e incremento
 
-// asignacion de varibles por referencia
-// la asignacion por referencia apunta a un variable en memoria no importa
-// si la variable sufrio cambios anteriormente simpre apuntara al mismo espacio de memoria 
-
-$nueva_variable=&$varriable_nueva;
-
-$varriable_nueva="hola a los gatitos";
-
-echo $nueva_variable;
+// = =asignacion
+// += 
+// -=
+// /=
+// .=
 
 ?>
+<?php 
+$a=25;
+$b=256;
+$suma=$a +$b;
+$resta=$a-$b;
+$multiplicacion=$a*$b;
+$division=$a/$b;
+$modulo=$a%$b;
 
- 
+
+echo "el resultado es ".'$suma ', var_dump($suma),"</br>";
+echo "el resultado es ".'$resta ', var_dump($resta)."</br>";
+echo "el resultado es ".'$multiplicacion ', var_dump($multiplicacion)."</br>";
+echo "el resultado es ".'$division ', var_dump($division)."</br>";
+echo "el resultado es ".'$modulo ', var_dump($modulo)."</br>";
+?>
+
+
