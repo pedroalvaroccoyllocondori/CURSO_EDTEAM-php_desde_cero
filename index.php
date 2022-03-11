@@ -14,30 +14,30 @@
 // -=
 // /=
 // .=
+// ============================================================
+// operadores de incremento
+// a--pos decremento
+// a++ pos incremento
+// --a pre decremento
+// ++a pre incremento
 
 ?>
 <?php 
 
 
+// preincremento primero hace el incremento despues la asignacion
+$valor=20;
+$nuevoValor=++$valor;
 
-$a=25;
-$a+=5;
-echo "suma ".$a."</br>";
-$a=25;
-$a-=5;
-echo "resta ".$a."</br>";
-$a=25;
-$a*=5;
-echo "producto ".$a."</br>";
-$a=25;
-$a/=5;
-echo "division ".$a."</br>";
+echo "valor es igual  ".$valor;
+echo "\nnuevoValor es igual".$nuevoValor;
 
-$a=25;
-$a.=5555;
-echo "concatenar ".$a."  tipo ".gettype($a)."</br>";
+// posdecremento primero hace la asignacion luego el incremento
+$valor1=100;
+$nuevoValor1=$valor1++;
 
-
+echo "\nvalor1 es igual  ".$valor1;
+echo "\nnuevoValor1 es igual".$nuevoValor1;
 
 
 
