@@ -1,46 +1,53 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <?php
-// operadores numericos
-// suma +,suma de a+b
-// resta -nresta de a-b
-// multipliacion *, producto de a*b
-// division /, cociente de a/ b 
-// modulo %, resto de division de a/ b
-// ================================================================
-// operadores de  asignacion e incremento
-
-// = =asignacion
-// += 
-// -=
-// /=
-// .=
-// ============================================================
-// operadores de incremento
-// a--pos decremento
-// a++ pos incremento
-// --a pre decremento
-// ++a pre incremento
+// arreglos en php
 
 ?>
+<p>arreglos</p>
 <?php 
+$arregloNumeros=[];
+$arrreglo_numero=array();
 
+//no se puede inprir el arreglo por q la funcion echo solo acepta enteros y cadenas
+// echo $arregloNumeros;
+echo var_dump($arregloNumeros)."</br>";
+//funcion para la inpresion de arreglos
+print_r($arregloNumeros);
 
-// preincremento primero hace el incremento despues la asignacion
-$valor=20;
-$nuevoValor=++$valor;
+echo "</br>";
+//array indexado
 
-echo "valor es igual  ".$valor;
-echo "\nnuevoValor es igual".$nuevoValor;
+$meses=['enero','febrero','marzo'];
 
-// posdecremento primero hace la asignacion luego el incremento
-$valor1=100;
-$nuevoValor1=$valor1++;
+var_dump($meses);
+echo   "</br>".$meses[0]. "</br>";
 
-echo "\nvalor1 es igual  ".$valor1;
-echo "\nnuevoValor1 es igual".$nuevoValor1;
+//añadiendo un nuevo valor al array
 
+$meses[]="abril";
+
+echo var_dump($meses);
+//añadiendo un nuevo valor al array en una posicion determinada
+echo "</br>";
+
+$meses[10]="noviembre";
+
+echo var_dump($meses);
+//error al imprimir una posicion q no existencia
+echo   "</br>".$meses[6]. "</br>";
 
 
 ?>
+    
+</body>
+</html>
 
 
