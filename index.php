@@ -17,20 +17,30 @@
 
 ?>
 <?php 
+
+
+
 $a=25;
-$b=256;
-$suma=$a +$b;
-$resta=$a-$b;
-$multiplicacion=$a*$b;
-$division=$a/$b;
-$modulo=$a%$b;
+$a+=5;
+echo "suma ".$a."</br>";
+$a=25;
+$a-=5;
+echo "resta ".$a."</br>";
+$a=25;
+$a*=5;
+echo "producto ".$a."</br>";
+$a=25;
+$a/=5;
+echo "division ".$a."</br>";
+
+$a=25;
+$a.=5555;
+echo "concatenar ".$a."  tipo ".gettype($a)."</br>";
 
 
-echo "el resultado es ".'$suma ', var_dump($suma),"</br>";
-echo "el resultado es ".'$resta ', var_dump($resta)."</br>";
-echo "el resultado es ".'$multiplicacion ', var_dump($multiplicacion)."</br>";
-echo "el resultado es ".'$division ', var_dump($division)."</br>";
-echo "el resultado es ".'$modulo ', var_dump($modulo)."</br>";
+
+
+
 ?>
 
 
