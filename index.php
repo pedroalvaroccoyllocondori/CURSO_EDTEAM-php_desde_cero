@@ -11,27 +11,31 @@
 // arreglos en php
 
 ?>
-<h1>ESTRUCTUAS DE CONTROL else ,if ,else if</h1>
+<h1>ESTRUCTUAS DE CONTROL switch</h1>
 <?php 
 
 // estructura  ELSE IF
 
-$numero=6;
-if ($numero==5) {
-    echo '<h2>el numero es igual a 5</h2>';
-}else if ($numero==6){
-    echo '<h2>el numero es igual a 6</h2>';
-}else if ($numero==7){
-    echo '<h2>el numero es igual a 7</h2>';
-}else{
-    echo '<h2>el numero no es igual a ninguno</h2>';
+$numero=66;
+
+switch ($numero) {
+    case 2:
+        echo '<h2>el numero es igual a 2</h2>';
+        break;
+    
+    case 3:
+        echo '<h2>el numero es igual a 3</h2>';
+        break;
+    
+    case 6:
+        echo '<h2>el numero es igual a 6</h2>';
+        break;
+    
+    default:
+        echo '<h2>el numero es igual a ninguno</h2>';
+        break;
 }
 
-
-// OPERADOR TERNARIO remplaza  al if
-
-$A=($numero==2)?"es igual a 1":"no es igual a ninguno";
-echo "el resultado es ".'<span style="color:red">'.$A."<span/>"
 
 
 ?>
