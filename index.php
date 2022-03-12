@@ -14,35 +14,69 @@
 <p>arreglos indexados</p>
 <?php 
 
-// ARREGLOS MULTIDIMENSIONALES indexado
+// funciones nativas en los arreglos 
 
-$alumnos=array(
-    array('alvaro',20,'cusco'),#fila1
-    array('carlos',55,'ica'),  #fila2
-    array('maria',35,'lima'),  #fila3
-    array('juana',56,'la libertad'),  #fila4
-);
+$cadena='';
+$arrglo=[];
+$arregloIndexado=[
+    'ilemento1', 'alemento2', 'elemento3',
+    'olemento4', 'alemento5', 'blemento6', 
+    'elemento7', 'elemento8', 'elemento9'
+];
 
-echo var_dump($alumnos);
-echo   "</br>".$alumnos[3][0]."</br>";
+#funcion para saber si una funcion es vacio
 
-// ARREGLOS MULTIDIMENSIONALES asociativo
-
-$alumnosNombre=array(
-    array('nombre'=>'alvaro','edad'=>20,'ciudad'=>'cusco'),#fila1
-    array('nombre'=>'carlos','edad'=>55,'ciudad'=>'ica'),  #fila2
-    array('nombre'=>'maria','edad'=>35,'ciudad'=>'lima'),  #fila3
-    array('nombre'=>'juana','edad'=>56,'ciudad'=>'la libertad'),  #fila4
-);
-
-echo var_dump($alumnosNombre);
-// agregando un nuevo valor a  array multidimensional asociativo
-$alumnosNombre[0]['calificaciones']=20.00;
-echo   "</br>"."</br>";
-echo var_dump($alumnosNombre);
+var_dump(empty($arrglo));
+echo "</br>";
+var_dump(empty($arregloIndexado));
+echo "</br>";
 
 
-echo   "</br>".'el nombre es '.$alumnosNombre[0]['nombre']."</br>";
+# funcion var saber si existe un elemento
+
+var_dump(isset($arregloIndexado[50]));
+
+#contar elementos de un arrglo
+
+echo "</br>"."elementos del arrglo ".count($arregloIndexado);
+
+#funcion para el antepenultimo elemento
+
+$posicion=count($arregloIndexado)-2;
+
+echo "</br>"."antepenultimo elementos del arrglo ";
+
+echo " ' ".$arregloIndexado[$posicion]." ' ";
+
+// ordenar los elementos de un array de manera alfabetica PIERDEN EL INDICE
+
+echo "</br></br></br></br>";
+sort($arregloIndexado);
+
+echo var_dump($arregloIndexado);
+
+// ordenar los elementos de un array de manera alfabetica  SIN PIERDEN EL INDICE
+
+echo "</br></br></br></br>";
+asort($arregloIndexado);
+
+echo var_dump($arregloIndexado);
+
+
+// ordenar los elementos de un array de manera INVERSA SIN PERDER INDICES
+
+echo "</br></br></br></br>";
+arsort($arregloIndexado);
+
+echo var_dump($arregloIndexado);
+
+
+// ordenar los elementos de un array de manera INVERSA PERDIENDO INDICES
+
+echo "</br></br></br></br>";
+rsort($arregloIndexado);
+
+echo var_dump($arregloIndexado);
 
 
 ?>
