@@ -11,72 +11,75 @@
 // arreglos en php
 
 ?>
-<p>arreglos indexados</p>
+<p>operaciones entre arreglos</p>
 <?php 
 
-// funciones nativas en los arreglos 
 
-$cadena='';
-$arrglo=[];
+// suma de valores del arreglos 
+
+$numeros=[10,20,30,40,50];
+$suma=array_sum($numeros);
+echo "mi suma de valores del arreglo es ".$suma."</br>";
+
+// encontrar diferencia entre arregglos DIFERENCIA DE CONJUNTOS
+
+$salon =['a1'=>'alvaro','a2'=>'pedro','a3'=>'martin','a4'=>'jose'];
+$salon1=['a1'=>'jose','a2'=>'alberto','a3'=>'maria','a4'=>'pedro'];
+$diferencia=array_diff($salon,$salon1);
+
+echo 'la diferencia de array es ';
+var_dump($diferencia);
+echo "</br></br>";
+
+// dividir un arreglo  especificando su tamaño
+
 $arregloIndexado=[
-    'ilemento1', 'alemento2', 'elemento3',
-    'olemento4', 'alemento5', 'blemento6', 
+    'elemento1', 'elemento2', 'elemento3',
+    'elemento4', 'elemento5', 'elemento6', 
     'elemento7', 'elemento8', 'elemento9'
 ];
 
-#funcion para saber si una funcion es vacio
-
-var_dump(empty($arrglo));
-echo "</br>";
-var_dump(empty($arregloIndexado));
-echo "</br>";
+$dividir=array_chunk($arregloIndexado,5);
+var_dump($dividir);
 
 
-# funcion var saber si existe un elemento
+// dividir un arreglo y eliminar lo anteriror
+echo "</br></br>";
+$arregloIndexado=[
+    'elemento1', 'elemento2', 'elemento3',
+    'elemento4', 'elemento5', 'elemento6', 
+    'elemento7', 'elemento8', 'elemento9'
+];
 
-var_dump(isset($arregloIndexado[50]));
+var_dump(array_slice($arregloIndexado,8));
 
-#contar elementos de un arrglo
-
-echo "</br>"."elementos del arrglo ".count($arregloIndexado);
-
-#funcion para el antepenultimo elemento
-
-$posicion=count($arregloIndexado)-2;
-
-echo "</br>"."antepenultimo elementos del arrglo ";
-
-echo " ' ".$arregloIndexado[$posicion]." ' ";
-
-// ordenar los elementos de un array de manera alfabetica PIERDEN EL INDICE
-
-echo "</br></br></br></br>";
-sort($arregloIndexado);
-
-echo var_dump($arregloIndexado);
-
-// ordenar los elementos de un array de manera alfabetica  SIN PIERDEN EL INDICE
-
-echo "</br></br></br></br>";
-asort($arregloIndexado);
-
-echo var_dump($arregloIndexado);
+// unir arregglos
+echo "</br></br>";
+$frutas=['banana','zandia','naranja'];
+$verduras=['zapallo','tomate','coliflor'];
+$unir=array_merge($frutas,$verduras);
+var_dump($unir);
 
 
-// ordenar los elementos de un array de manera INVERSA SIN PERDER INDICES
+// eliminar el ultimo elemento
+echo "</br></br>";
+$arregloIndexado=[
+    'elemento1', 'elemento2', 'elemento3',
+    'elemento4', 'elemento5', 'elemento6', 
+    'elemento7', 'elemento8', 'elemento9'
+];
+array_pop($arregloIndexado);
+var_dump($arregloIndexado);
+ 
+//agregar un nuevo elemento al arreglo de la
+echo "</br></br>";
+array_push($arregloIndexado,'elemento indeterminado');
+var_dump($arregloIndexado);
 
-echo "</br></br></br></br>";
-arsort($arregloIndexado);
-
-echo var_dump($arregloIndexado);
-
-
-// ordenar los elementos de un array de manera INVERSA PERDIENDO INDICES
-
-echo "</br></br></br></br>";
-rsort($arregloIndexado);
-
-echo var_dump($arregloIndexado);
+//buscar un elemento en el array de la
+echo "</br></br>";
+$buscar=array_search('elemento4',$arregloIndexado);#devuelve un valor entero de la posicion encontrada
+var_dump($buscar);
 
 
 ?>
