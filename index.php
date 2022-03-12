@@ -14,36 +14,35 @@
 <p>arreglos indexados</p>
 <?php 
 
-//array indexado
+// ARREGLOS MULTIDIMENSIONALES indexado
 
-        $meses=['enero','febrero','marzo'];
+$alumnos=array(
+    array('alvaro',20,'cusco'),#fila1
+    array('carlos',55,'ica'),  #fila2
+    array('maria',35,'lima'),  #fila3
+    array('juana',56,'la libertad'),  #fila4
+);
 
-        var_dump($meses);
-        echo   "</br>".$meses[0]. "</br>";
+echo var_dump($alumnos);
+echo   "</br>".$alumnos[3][0]."</br>";
 
-        //añadiendo un nuevo valor al array
+// ARREGLOS MULTIDIMENSIONALES asociativo
 
-        $meses[]="abril";
+$alumnosNombre=array(
+    array('nombre'=>'alvaro','edad'=>20,'ciudad'=>'cusco'),#fila1
+    array('nombre'=>'carlos','edad'=>55,'ciudad'=>'ica'),  #fila2
+    array('nombre'=>'maria','edad'=>35,'ciudad'=>'lima'),  #fila3
+    array('nombre'=>'juana','edad'=>56,'ciudad'=>'la libertad'),  #fila4
+);
 
-        echo var_dump($meses);
-        //añadiendo un nuevo valor al array en una posicion determinada
-        echo "</br>";
+echo var_dump($alumnosNombre);
+// agregando un nuevo valor a  array multidimensional asociativo
+$alumnosNombre[0]['calificaciones']=20.00;
+echo   "</br>"."</br>";
+echo var_dump($alumnosNombre);
 
-        $meses[10]="noviembre";
 
-        echo var_dump($meses);
-        //error al imprimir una posicion q no existencia
-        echo   "</br>".$meses[6]. "</br>";
-
-// array asociativo
-
-echo ' <p>arreglos asociativos</p>';
-
-$usuario=['alvaro'=>'javascrip','carlos'=>'css','maria'=>'c#'];
-$usuario=array('alvaro'=>'javascript','carlos'=>'css','maria'=>'c#');
-
-echo var_dump($usuario);
-echo   "</br>"."el leguaje que mas me gusta es ".$usuario['alvaro']. "</br>";
+echo   "</br>".'el nombre es '.$alumnosNombre[0]['nombre']."</br>";
 
 
 ?>
