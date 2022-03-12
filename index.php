@@ -11,41 +11,43 @@
 // arreglos en php
 
 ?>
-<p>arreglos</p>
+<p>arreglos indexados</p>
 <?php 
-$arregloNumeros=[];
-$arrreglo_numero=array();
 
-//no se puede inprir el arreglo por q la funcion echo solo acepta enteros y cadenas
-// echo $arregloNumeros;
-echo var_dump($arregloNumeros)."</br>";
-//funcion para la inpresion de arreglos
-print_r($arregloNumeros);
-
-echo "</br>";
 //array indexado
 
-$meses=['enero','febrero','marzo'];
+        $meses=['enero','febrero','marzo'];
 
-var_dump($meses);
-echo   "</br>".$meses[0]. "</br>";
+        var_dump($meses);
+        echo   "</br>".$meses[0]. "</br>";
 
-//añadiendo un nuevo valor al array
+        //añadiendo un nuevo valor al array
 
-$meses[]="abril";
+        $meses[]="abril";
 
-echo var_dump($meses);
-//añadiendo un nuevo valor al array en una posicion determinada
-echo "</br>";
+        echo var_dump($meses);
+        //añadiendo un nuevo valor al array en una posicion determinada
+        echo "</br>";
 
-$meses[10]="noviembre";
+        $meses[10]="noviembre";
 
-echo var_dump($meses);
-//error al imprimir una posicion q no existencia
-echo   "</br>".$meses[6]. "</br>";
+        echo var_dump($meses);
+        //error al imprimir una posicion q no existencia
+        echo   "</br>".$meses[6]. "</br>";
+
+// array asociativo
+
+echo ' <p>arreglos asociativos</p>';
+
+$usuario=['alvaro'=>'javascrip','carlos'=>'css','maria'=>'c#'];
+$usuario=array('alvaro'=>'javascript','carlos'=>'css','maria'=>'c#');
+
+echo var_dump($usuario);
+echo   "</br>"."el leguaje que mas me gusta es ".$usuario['alvaro']. "</br>";
 
 
 ?>
+   
     
 </body>
 </html>
