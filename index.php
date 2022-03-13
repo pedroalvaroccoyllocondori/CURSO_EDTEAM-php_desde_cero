@@ -14,20 +14,33 @@
 <?php 
 
 
-//funcion con parametro predefinido
-function sumarNumero($a,$b,$imprimir=false) {
-    $suma=$a+$b;
-    if ($imprimir) {
-        echo "la suma es ".$suma."</br>";
-        
-    }else{
-        return $suma;
-    }
+// funcion anonima
+
+$despedida= function(){
+    echo "esta es un funcion anonima";
+};
+$despedida();
+
+
+// funcion anomina closure CALLBACKS
+
+function finalizarCurso(Closure $curso,$nombre){
+    return $curso($nombre);
 }
-sumarNumero(15,25,true)
+
+$php = function($nombre){
+    return "<h1>gracias ".$nombre." por finalizar el curso</h1>";
+};
+$javascrit = function($nombre){
+    return "<h1>gracias ".$nombre." por finalizar el curso</h1>";
+};
+
+echo finalizarCurso($php,'jadhiel');
+echo finalizarCurso($javascrit,'alvaro');
 
 
  ?>
+
 </body>
 </html>
 
