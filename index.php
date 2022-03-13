@@ -13,10 +13,23 @@
 <h1>CICLOS</h1>
 <?php 
 
-// inicializar ,evaluar ,iterar
-for ($i=0,$j=0; $i < 5 and $j <10; $i++ ,$j++) { 
-    echo "el numero i es ".$i.", el numero j es ".$j."\n"."</br>";
+// FOREACH
+// arreglos indexados
+$ARRAY=array('gato','perro','perico','raton');
+
+foreach($ARRAY as $elemento){
+    echo $elemento."</br>";
 }
+
+// arreglos asociativos
+
+$ARRAY=array('gato'=>'cat','perro'=>'dog','perico'=>'bird','raton'=>'mouse');
+
+foreach($ARRAY as $esp=>$ing){
+    echo "la llave es ".$esp.',el valor es '.$ing."</br>";
+}
+
+
 
  ?>
 </body>
