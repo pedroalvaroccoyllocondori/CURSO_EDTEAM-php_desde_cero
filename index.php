@@ -8,22 +8,48 @@
 </head>
 <body>
 <?php
-// EJERCICIOS
+// ciclos
 ?>
-<h1>ejercicios</h1>
+<h1>CICLOS</h1>
 <?php 
-$numero="100";
-if($numero === 100){
-    echo "es igual";
-}else{
-    echo "no es igual";
+
+// ESTRUCTURA DEL BUCLE WHILE
+$i=1;
+while ($i <= 10) {
+    echo "el numero es ".$i."\n"."</br>";
+    $i++;
 }
 
-// operador and y or  USADO EN ESTRUCTURAS DE CONTROL DE FLUJO
+// while en array
+$frutas=array("manzana","peras","bananas","limon");
+
+$salir =0;
+$i=0;
+while ($salir != 1){
+    if ($frutas[$i]=='bananas') {
+        echo '<h1>encontre las bananas </h1>';
+        $salir = 1;
+    }else{
+        echo '<h1>la fruta encontrada'.$frutas[$i].'</h1>';
+        $i++;
+    }
+}
 
 
-?>
-    
+// ciclo do while se ejecuta al menos una vez
+
+
+$i=-2;
+do {
+    echo "numero ".$i."</br>";
+    $i++;
+}while($i<5)
+
+
+
+
+
+ ?>
 </body>
 </html>
 
