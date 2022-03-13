@@ -8,27 +8,23 @@
 </head>
 <body>
 <?php
-// ciclos
+// funciones
 ?>
-<h1>CICLOS</h1>
+<h1>FUNCIONES</h1>
 <?php 
 
-// FOREACH
-// arreglos indexados
-$ARRAY=array('gato','perro','perico','raton');
 
-foreach($ARRAY as $elemento){
-    echo $elemento."</br>";
+//funcion con parametro predefinido
+function sumarNumero($a,$b,$imprimir=false) {
+    $suma=$a+$b;
+    if ($imprimir) {
+        echo "la suma es ".$suma."</br>";
+        
+    }else{
+        return $suma;
+    }
 }
-
-// arreglos asociativos
-
-$ARRAY=array('gato'=>'cat','perro'=>'dog','perico'=>'bird','raton'=>'mouse');
-
-foreach($ARRAY as $esp=>$ing){
-    echo "la llave es ".$esp.',el valor es '.$ing."</br>";
-}
-
+sumarNumero(15,25,true)
 
 
  ?>
