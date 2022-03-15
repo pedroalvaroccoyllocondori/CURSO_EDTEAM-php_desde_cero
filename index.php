@@ -10,24 +10,11 @@
 
 <h1>POO clases</h1>
 <?php 
+    define('INC','/includes/');
+    require_once __DIR__ . INC . 'curso.php';
 
-class Curso{
-    public $publico="modificador de acceso publicp";
-    private $private="modificador de acceso privado";
-    protected $protected="modificador de acceso protegido";
-    
-
-    function obtenerMensajePrivado(){
-        return $this->private;
-    }
-}
-// instaciar la clase
-$prueba=new Curso();
-
-echo "<h2>".$prueba->publico."</h2>";
-echo "<h2>".$prueba->obtenerMensajePrivado()."</h2>";
-echo "<h2>".$prueba->protected."</h2>";
-
+    $curso1= new Curso('css','3semanas',100,'alvaro ccoyllo',true);
+    $curso2= new Curso('scss','15semanas',1000,'jadhiel rodriguez',true);
 
  ?>
 
