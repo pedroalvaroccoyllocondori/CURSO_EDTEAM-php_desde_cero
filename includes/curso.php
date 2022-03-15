@@ -21,13 +21,17 @@ class Curso implements Conocimiento,Requerimiento{
     private $profesor;
     private $disponible;
 
-    // metodo constructor
+    // metodo constructor se ejecuta cuando todas las instancias y los metodos se ejecutan  destruyendo el objeto
     public function __construct($nombre,$duracion,$costo,$profesor,$disponible){
     $this->nombre =$nombre;
     $this->duracion =$duracion;
     $this->costo =$costo;
     $this->profesor =$profesor;
     $this->disponible =$disponible;
+    }
+    // metodo destructor
+    public function __destruct(){
+        echo "<h1>destrurendo      ".$this->nombre."</h1>";
     }
 
     // GETTER Y SETTER
@@ -68,7 +72,7 @@ class Curso implements Conocimiento,Requerimiento{
     }
 
     public function obtenerConocimiento(){
-        
+
     }
 
 
