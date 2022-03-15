@@ -8,35 +8,28 @@
 </head>
 <body>
 <?php
-// funciones
+// POO
 ?>
-<h1>FUNCIONES</h1>
+<h1>POO clases</h1>
 <?php 
 
+class Curso{
+    public $nombre;
+    public $duracion;
+    public $costo;
+    public $profesor;
+    public $disponible;
 
-// funcion anonima
-
-$despedida= function(){
-    echo "esta es un funcion anonima";
-};
-$despedida();
-
-
-// funcion anomina closure CALLBACKS
-
-function finalizarCurso(Closure $curso,$nombre){
-    return $curso($nombre);
 }
+// instaciar la clase
+$php = new Curso();
+$php->nombre='POO EN PHP';
+$php->duracion='3 semanas';
+$php->costo=10;
+$php->profesor='alvaro';
+$php->disponible=true;
 
-$php = function($nombre){
-    return "<h1>gracias ".$nombre." por finalizar el curso</h1>";
-};
-$javascrit = function($nombre){
-    return "<h1>gracias ".$nombre." por finalizar el curso</h1>";
-};
-
-echo finalizarCurso($php,'jadhiel');
-echo finalizarCurso($javascrit,'alvaro');
+var_dump($php);
 
 
  ?>
