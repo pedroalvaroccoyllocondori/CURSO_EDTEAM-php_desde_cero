@@ -16,6 +16,13 @@
     $curso1= new Curso('css','3semanas',100,'alvaro ccoyllo',true);
     $curso2= new Curso('scss','15semanas',1000,'jadhiel rodriguez',true);
 
+    echo $curso1->getNombre()."</br>";
+    echo $curso1->getProfesor()."</br>";
+
+    $curso1->setNombre('css avanzado');
+    echo $curso1->getNombre()."</br>";
+
+
  ?>
 
 

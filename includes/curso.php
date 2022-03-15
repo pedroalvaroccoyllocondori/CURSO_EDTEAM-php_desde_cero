@@ -19,6 +19,27 @@ class Curso{
     $this->disponible =$disponible;
     }
 
+    // GETTER Y SETTER
+    // getter
+    public function getNombre() {
+        return $this->nombre;
+    }
+    public function getProfesor() {
+        return $this->profesor;
+    }
+    // setter
+    public function setNombre($nombre) {
+        $this->nombre =$nombre;
+
+    }
+    public function setProfesor() {
+        $this->profesor =$profesor;
+
+    }
+
+
+
+
 }
 
 
