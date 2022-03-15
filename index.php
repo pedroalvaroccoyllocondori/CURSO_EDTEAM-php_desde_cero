@@ -25,6 +25,9 @@
     $curso1->asignarRequerimiento(['css flex','css grid']);
     $curso1->obtenerRequerimiento();
 
+    echo Curso::$moneda;
+    echo Curso::obtenerMoneda();
+
  ?>
 
 

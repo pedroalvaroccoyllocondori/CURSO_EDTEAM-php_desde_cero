@@ -21,6 +21,8 @@ class Curso implements Conocimiento,Requerimiento{
     private $profesor;
     private $disponible;
 
+    public static $moneda='PEN';
+
     // metodo constructor se ejecuta cuando todas las instancias y los metodos se ejecutan  destruyendo el objeto
     public function __construct($nombre,$duracion,$costo,$profesor,$disponible){
     $this->nombre =$nombre;
@@ -74,7 +76,9 @@ class Curso implements Conocimiento,Requerimiento{
     public function obtenerConocimiento(){
 
     }
-
+    static function obtenerMoneda(){
+        return self::$moneda;
+    }
 
 
 }
