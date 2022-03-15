@@ -7,32 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-// POO
-?>
+
 <h1>POO clases</h1>
 <?php 
 
 class Curso{
-    public $nombre;
-    public $duracion;
-    public $costo;
-    public $profesor;
-    public $disponible;
+    public $publico="modificador de acceso publicp";
+    private $private="modificador de acceso privado";
+    protected $protected="modificador de acceso protegido";
+    
 
+    function obtenerMensajePrivado(){
+        return $this->private;
+    }
 }
 // instaciar la clase
-$php = new Curso();
-$php->nombre='POO EN PHP';
-$php->duracion='3 semanas';
-$php->costo=10;
-$php->profesor='alvaro';
-$php->disponible=true;
+$prueba=new Curso();
 
-var_dump($php);
+echo "<h2>".$prueba->publico."</h2>";
+echo "<h2>".$prueba->obtenerMensajePrivado()."</h2>";
+echo "<h2>".$prueba->protected."</h2>";
 
 
  ?>
+
 
 </body>
 </html>
