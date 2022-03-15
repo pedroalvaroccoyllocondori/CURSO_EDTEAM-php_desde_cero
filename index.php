@@ -22,6 +22,8 @@
     $curso1->setNombre('css avanzado');
     echo $curso1->getNombre()."</br>";
 
+    $curso1->asignarRequerimiento(['css flex','css grid']);
+    $curso1->obtenerRequerimiento();
 
  ?>
 

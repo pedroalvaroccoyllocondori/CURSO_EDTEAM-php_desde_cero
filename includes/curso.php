@@ -2,8 +2,19 @@
 
 
 <?php 
+
+interface Requerimiento{
+    public function asignarRequerimiento($listado);
+    public function obtenerRequerimiento();
+}
    
-class Curso{
+
+interface Conocimiento{
+    public function asignarConocimiento($listado);
+    public function obtenerConocimiento();
+}
+
+class Curso implements Conocimiento,Requerimiento{
     private $nombre;
     private $duracion;
     private $costo;
@@ -37,6 +48,28 @@ class Curso{
 
     }
 
+    // implementando interfaces
+
+    public function asignarRequerimiento($listado){
+        $this->listado=$listado;
+
+    }
+
+    public function obtenerRequerimiento(){
+        if(!empty($this->listado)){
+            foreach($this->listado as $listafor){
+                echo '<h3>'.$listafor.'</h3>';
+            }
+        }
+    }
+
+    public function asignarConocimiento($listado){
+
+    }
+
+    public function obtenerConocimiento(){
+        
+    }
 
 
 
