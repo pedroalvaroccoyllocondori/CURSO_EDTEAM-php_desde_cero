@@ -10,25 +10,23 @@
 
 <h1>POO clases</h1>
 <?php 
-    define('INC','/includes/');
-    require_once __DIR__ . INC . 'curso.php';
 
-    $curso1= new Curso('css','3semanas',100,'alvaro ccoyllo',true);
-    $curso2= new Curso('scss','15semanas',1000,'jadhiel rodriguez',true);
 
-    echo $curso1->getNombre()."</br>";
-    echo $curso1->getProfesor()."</br>";
+    require_once __DIR__ . '/includes/global.php';
 
-    $curso1->setNombre('css avanzado');
-    echo $curso1->getNombre()."</br>";
+   #instancia de estudiante 
 
-    $curso1->asignarRequerimiento(['css flex','css grid']);
-    $curso1->obtenerRequerimiento();
+   $estudiante = new Estudiante('alvaro','ccoyllo','alvaro@gmail.com');
+    var_dump($estudiante);
 
-    echo Curso::$moneda;
-    echo Curso::obtenerMoneda();
-
+    echo '<h1>'.$estudiante->biembenida().'</h1>';
+    
+    $profesor = new Profesor('alonso','ccoyllo','alvaro@gmail.com');
+    var_dump($profesor);
+    
+    echo '<h1>'.$profesor->biembenida().'</h1>';
  ?>
+
 
 
 </body>
