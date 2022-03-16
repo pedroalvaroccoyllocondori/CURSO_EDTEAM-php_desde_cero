@@ -17,9 +17,21 @@ class Persona{
     public $email;
 
     public function __construct($nombre, $apellidos, $email){
-        $this->nombre = $nombre;
+        // $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->email = $email;
+
+        try{
+            if(empty($this->nombre)){
+                throw new Exception('debes de ingresar tu nombre');
+            }else{
+                $this->nombre = $nombre;
+            }
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
+
+
     }
 
     public function biembenida(){
