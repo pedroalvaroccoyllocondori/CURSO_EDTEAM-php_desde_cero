@@ -16,7 +16,7 @@
 
    #instancia de estudiante 
 
-   $estudiante = new Estudiante('','ccoyllo','alvaro@gmail.com');
+   $estudiante = new Estudiante('alvaro','ccoyllo','alvaro@gmail.com');
     var_dump($estudiante);
 
     echo '<h1>'.$estudiante->biembenida().'</h1>';

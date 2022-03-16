@@ -17,23 +17,29 @@ class Persona{
     public $email;
 
     public function __construct($nombre, $apellidos, $email){
-        // $this->nombre = $nombre;
+        $this->correoValido($this->email);
         $this->apellidos = $apellidos;
         $this->email = $email;
+        $this->nombre = $nombre;
+       
+
+    }
+
+    public function validarNombre(){
+
+    }
+    public function correoValido($email){
 
         try{
-            if(empty($this->nombre)){
-                throw new Exception('debes de ingresar tu nombre');
-            }else{
-                $this->nombre = $nombre;
+            if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
+                throw new Exception("correo invalido");
             }
+           
         }catch(Exception $e){
             echo $e->getMessage();
         }
 
-
     }
-
     public function biembenida(){
         return "Bienvenido {$this->nombre} a la POO en php";
     }
