@@ -1,3 +1,12 @@
+<?php 
+
+require_once "Estudiante_modelo.php";
+
+// $estudiantee=new Estudiante_modelo();
+  
+    
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +17,10 @@
 </head>
 <body>
 
-<h1>BASES DE DATOS EN PHP</h1>
-<?php 
-
-
-    require_once __DIR__ . '/includes/conexion.php';
-
-    $conecta=conecta();
-    if($conecta==true){
-        echo "<h3> me conecte a mysql</h3>";
-    }else{
-        
-    }
-
-  
-    
- ?>
-
-
+<h1>panel de administracion</h1>
+<a href="Estudiante_vista.php">ESTUDIANTE  </a>
+<a href="#">PROFESOR </a>
+<a href="#">CURSO </a>
 
 </body>
 </html>
