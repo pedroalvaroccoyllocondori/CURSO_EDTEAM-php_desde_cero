@@ -44,6 +44,17 @@ $estudiantee = new Estudiante_modelo();
     // var_dump($respuesta);
     
     ?>
+    <h1>actualizar</h1>
+    <?php
+      $alumno=[
+        'nombre'=>'juan miguel',
+        'paterno'=>'vargas',
+        'materno'=>'condori',
+        'email'=>'pedrp@aloooooooo'
+    ];
+
+    $estudiantee->actualizar($alumno)
+    ?>
 
 </body>
 </html>

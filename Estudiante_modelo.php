@@ -40,10 +40,22 @@ class Estudiante_modelo extends DB{
         }
          
      }
-    //  public function actualizar(){
+     public function actualizar($registro){
+         $conexion=parent::conectar();
+         try{
+
+            $query="UPDATE usuarios SET nombre =:nombre,paterno=:paterno ,materno=:materno WHERE email=:email";
+
+            $actualizar=$conexion->prepare($query)->execute($registro);
+
+            echo "se ha actualizado un registro";
+
+         }catch(Exception $e){
+
+         }
       
          
-    //  }
+     }
     //  public function eliminar(){
       
          

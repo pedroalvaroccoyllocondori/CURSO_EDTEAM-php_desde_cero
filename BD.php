@@ -38,8 +38,8 @@ abstract class DB{
 
     abstract protected function insertar($registro);
     abstract protected function consultar();
-    // abstract protected function actualizar($registro);
-    // abstract protected function eliminar($registro,$eliminar);
+    abstract protected function actualizar($registro);
+    // abstract protected function eliminar($accion,$eliminar);
 
 }
 
