@@ -28,15 +28,18 @@ class Estudiante_modelo extends DB{
 
      }
 
-    //  public function consultar(){
-    //      $conexion=parent::conectar();
-    //     try{
+     public function consultar(){
+         $conexion=parent::conectar();
+        try{
 
-    //     }catch(Exception $e){
-    //         exit("ERROR: ".$e->getMessage());
-    //     }
+            $query="SELECT * FROM usuarios";
+            return $consulta=$conexion->query($query)->fetchAll();#fetch solo busca el primer registro y fetchAll todos los registros
+
+        }catch(Exception $e){
+            exit("ERROR: ".$e->getMessage());
+        }
          
-    //  }
+     }
     //  public function actualizar(){
       
          

@@ -15,12 +15,12 @@ $estudiantee = new Estudiante_modelo();
 </head>
 <body>
     <h1>crud de estudiante</h1>
+    <h1>insertar</h1>
     <?php
     
     var_dump(PDO::getAvailableDrivers());
-
+    
     ?>
-    <h3>insertar</h3>
     <?php
     
     $alumno=[
@@ -29,9 +29,20 @@ $estudiantee = new Estudiante_modelo();
         'materno'=>'condori',
         'email'=>'pedrp@aloooooooo'
     ];
-
+    
     $estudiantee->insertar($alumno)
+    
+    ?>
+    <h1>consulta</h1>
+    <?php
+    $respuesta = $estudiantee->consultar();
 
+    foreach ($respuesta as $respuestaIterada){
+        echo $respuestaIterada['nombre']." ".$respuestaIterada['paterno']."</br>";
+    }
+
+    // var_dump($respuesta);
+    
     ?>
 
 </body>
