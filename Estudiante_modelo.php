@@ -56,10 +56,33 @@ class Estudiante_modelo extends DB{
       
          
      }
-    //  public function eliminar(){
+     public function eliminar($accion,$eliminar){
+         $conexion=parent::conectar();
+
+         if ($accion =="todos") {
+             try{
+                $query="DELETE FROM usuarios";
+                $eliminar=$conexion->prepare($query)->execute();
+                echo "se ha eliminado todos los  registro";
+
+             }catch(Exception $e){
+                exit("ERROR: ".$e->getMessage());
+            }   
+        }else{
+            try{
+                $query="DELETE FROM usuarios WHERE email=:email";
+                $eliminar=$conexion->prepare($query)->execute($eliminar);
+                echo "se ha eliminado un registro";
+
+
+
+            }catch(Exception $e){
+               exit("ERROR: ".$e->getMessage());
+           }
+         }
       
          
-    //  }
+     }
 
 }
 

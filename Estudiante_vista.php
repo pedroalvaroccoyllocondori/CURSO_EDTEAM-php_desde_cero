@@ -56,5 +56,15 @@ $estudiantee = new Estudiante_modelo();
     $estudiantee->actualizar($alumno)
     ?>
 
+
+    <h1>eliminar</h1>
+    <?php
+      $alumno=[
+        'email'=>'pedrp@aloooooooo'
+    ];
+
+    // $estudiantee->eliminar("todos",$alumno)
+    ?>
+
 </body>
 </html>
