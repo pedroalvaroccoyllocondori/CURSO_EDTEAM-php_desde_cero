@@ -28,18 +28,42 @@ class Estudiante_modelo extends DB{
 
      }
 
-     public function consultar(){
+     public function consultar($campos=null,$where=null){
          $conexion=parent::conectar();
         try{
+            $cadena ='';
+            if(!empty($campos)){
+                foreach($campos as $campIterado){
+                    $cadena .= $campIterado.",";
+                }
+                $cadena=substr($cadena,0,-1);
 
-            $query="SELECT * FROM usuarios";
-            return $consulta=$conexion->query($query)->fetchAll();#fetch solo busca el primer registro y fetchAll todos los registros
+            }else{
+                $cadena = '*';
+            }
+            
+            if($where!==null){
+                foreach($where as $llave =>$valor){
+                    if ($valor!==null){} {
+                        $condicion[] = $llave." ".$valor;
+                    }
+                }
+                $query="SELECT ".$cadena."FROM usuarios WHERE".implode(" AND ",$condicion);
+
+            }else{
+                $query="SELECT ".$cadena."FROM usuarios";
+            }
+            $consulta = $conexion->prepare($query)->fetchAll();
+            return $consulta;
+            
 
         }catch(Exception $e){
             exit("ERROR: ".$e->getMessage());
         }
          
      }
+
+     
      public function actualizar($registro){
          $conexion=parent::conectar();
          try{
